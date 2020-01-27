@@ -15,4 +15,15 @@ camada 4 - com IP e porta exemplo FIREWALL bloqueia a porta de um servico
 PING e de camada 7 porem ele usa ICMP que é de camada 3 pois alguem criou o nome ping digamos 
  
  PORTA ALTA 1025 DE 65535 
+ ----------------------------------------------------------------------------------------------------------
+ 
+ camada 1 - trabalha com energia e bit
+camada 2 - trabalha com Mac 
+Camada 3 - trabalha com endereco logico 
+camada 4 - com IP e porta exemplo FIREWALL bloqueia a porta de um servico 
+
+-----------------------------------------------------------------------------------------------------
+PING e de camada 7 porem ele usa ICMP que é de camada 3 pois alguem criou o nome ping digamos 
+ 
+ PORTA ALTA 1025 DE 65535 
  
