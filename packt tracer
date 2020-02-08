@@ -8,3 +8,9 @@ mostra se o modo trunk esta ativo na interface desejada
 ajuda ver se o vtp esta configurado corretamente como server e outros disposito como cliente e assim sucessivamente.
 
 ==========================================================================================================================================
+                                (show ip interface go/0
+mostra as configuracoes de uma determinada porta 
+
+
+
+
