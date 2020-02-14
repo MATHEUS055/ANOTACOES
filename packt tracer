@@ -11,6 +11,41 @@ ajuda ver se o vtp esta configurado corretamente como server e outros disposito 
                                 (show ip interface go/0
 mostra as configuracoes de uma determinada porta 
 
+==========================================================================================================================================
 
+ripv1 o primeiro protocolo de roteamentO
+
+
+
+
+CONFT# ROUTER RIP
+CONFIG-ROUTER)# NETWORK 192.168.0.0
+CONFIG-ROUTER)# NETWORK 192.168.1.0
+                       
+
+------------------------------------------------------------------------------
+mudar a versao do protocolo RIP
+conft 
+router ip
+config-router)#version 2
+-------------------------------------------------------------------------------
+
+
+#show ip protocols 
+para ver os protocolos configurado no roteador
+-------------------------------------------------------------------------------
+
+
+config)router ip
+config-router)no auto-summary
+-------------------------------------------------------------------------------
+config)# router rip
+config-router)#passive-interface default    
+config-router)#no passive-interface serial 0/0/0
+config-router)#no passive-interface g0/1
+-------------------------------------------------------------------------------
+                                  ROTA PADRAO no roteamento dinamico
+config)#router ip 
+config-router)# default-information originate
 
 
