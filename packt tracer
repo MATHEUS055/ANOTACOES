@@ -49,3 +49,103 @@ config)#router ip
 config-router)# default-information originate
 
 
+
+
+
+VTP - Vlan TRUNKing PROTOCOL 
+
+- mode de revisao do vtp server, quando vc tiver alteração o sw-server e muda algo na vlan, ele altera o numero de 1 em 1
+qualquer alteração, exclusao etc, ele muda a revisao 
+
+ 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+CDP - cisco discovery protocol
+
+
+habilita o CDP globalmente no equipamento
+config) #cdp run
+
+desabilita 
+config) #no cdp run
+
+habilita cdp somente em uma interface 
+config)# interface f0/1
+config-if)# cdp enable
+
+desabilita o CDP somente em uma interface
+config)# interface f0/1
+config-if)# no cdp enable 
+
+-------------------------------------------------------------------------------------
+
+show cdp entry * mostra em detalhes de quem esta conectado ao seu equipamento
+
+-------------------------------------------------------------------------------------
+
+show cdp interface (nome da interface) - mostra se na interface esta habilitado ou nao o CDP
+-------------------------------------------------------------------------------------------
+
+show cdp neighbors mostra um resumo de quem esta conectado ao seus equipamentos 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ETHERCCHANEL 
+
+agregação de links
+trabalha com spanning-tree
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PAGP - PROTOCOLO - PROPRIETARIO DA CISCO-ENVIA A CADA 30 SEGUNDOS PARA VERIFICAÇÃO - 
+
+DESIRABLE - FICA PERGUNTANDO TODA HORA 
+
+DISARABLE- DESIRABLE = ok
+AUTO - DERISABLE =ok
+DESIRABLE - AUTO =ok
+AUTO - AUTO =nao ok 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LACP - Protocolo - é livre - ENVIA A CADA 30 SEGUNDOS PARA VERIFICAÇÃO
+
+ACTIVE  - ENVIA PARA TER A COMUNICAÇÃO
+PASSIVE - ELE ACEITA A NEGOCIAÇÃO MAS NAO MANDA PACOTE SO RECEBE 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+REGRAS PARA O ETHERCHANNEL FUNCIONE 
+
+-VELOCIDADE 
+-ENCAPSULAMENTO TRUNK
+-DUPLEX 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SW1(CONFIG)# INTERFACE RANGE FASTETHERNET 0/1-2
+SW1(CONFIG-IF-RANGE)#CHANNEL-GROUP 1 MODE DESIRABLE
+
+
+SW2(CONFIG)#INTERFACE RANGE FASTETHERNET 0/1-2
+SW2(CONFIG-IF-RANGE)#CHANNEL-GROUP 1 MODE DESIRABLE   (GROUP ELE QUE DEFINE O COMUNICAÇÃO PARA QUE ESTEJA NO MESMO "GROUP")
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                      COMANDO DE VERIFICAÇÃO 
+
+#SHOW ETHERCHANNEL SUMMARY - MOSTRA UM RESUMO DOS ETHERCHANNEL CONFIGURADAS
+
+#SHOW ETHERCHANNEL PORT-CHANNEL - MOSTRA DETALHES DOS ETHERCHANNELS CONFIGURADAS 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
